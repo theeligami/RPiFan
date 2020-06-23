@@ -7,4 +7,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-ExecStart=
+ExecStart=/usr/bin/python3 /usr/local/sbin/RPiFan/RPiFan.py
+
+[Install]
+WantedBy=multi-user.target
