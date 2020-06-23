@@ -31,6 +31,3 @@ def main():
         else:
             p.ChangeDutyCycle(100)
         time.sleep(1)
-
-if __name__ == "__main__":
-    main()
