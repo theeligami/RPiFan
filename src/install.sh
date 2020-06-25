@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+	echo "Please run as root"
+	exit
+fi
+
 echo "Installing RPiFan - by Elias Kleimeier - https://github.com/theeligami"
 mkdir /usr/local/sbin/RPiFan/
 cp RPiFan.py /usr/local/sbin/RPiFan
@@ -20,7 +25,7 @@ echo "Done"
 read -p "Would you like to reboot now? [y/N]: " input
 if [ $input == "y" || $input == "Y" ]; then
 	echo "Rebooting now"
-	reboot
+	shutdown -r now 'Installation of RPiFan Control requires reboot'
 else
 	echo "Changes will take effect after a reboot."
 	echo "Bye!"
