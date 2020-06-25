@@ -2,8 +2,13 @@ import RPI.GPIO as GPIO
 import time
 import os
 
-FAN = 14    # Fan GPIO
-duty = 0    # Duty cycle
+FAN = 14        # Fan GPIO
+FAN_MIN = 58    # Fan minimum duty cycle
+FAN_MAX = 100# Fan maximum duty cycle
+FAN_25 = (FAN_MAX - FAN_MIN) * 0,25
+FAN_50 = (FAN_MAX - FAN_MIN) * 0,5
+FAN_75 = (FAN_MAX - FAN_MIN) * 0,75
+duty = 0        # Duty cycle
 
 # Setup GPIOs
 GPIO.setmode(GPIO.BCM)
@@ -23,11 +28,11 @@ def main():
         if (temp < 38.0):
             p.ChangeDutyCycle(0)
         elif (temp >= 40.0 and temp < 50.0):
-            p.ChangeDutyCycle(25)
+            p.ChangeDutyCycle(FAN_25)
         elif (temp >= 50.0 and temp < 60.0):
-            p.ChangeDutyCycle(50)
+            p.ChangeDutyCycle(FAN_50)
         elif (temp >= 60.0 and temp < 70.0):
-            p.ChangeDutyCycle(75)
+            p.ChangeDutyCycle(FAN_75)
         else:
-            p.ChangeDutyCycle(100)
+            p.ChangeDutyCycle(FAN_MAX)
         time.sleep(1)
