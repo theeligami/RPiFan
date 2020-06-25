@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/elias/Projekte/Raspberry Pi Fan Hat/Raspberry Pi Fan Hat.sch</source>
-    <date>Mon 22 Jun 2020 12:16:42 CEST</date>
+    <source>/home/elias/Projekte/RPiFan/kicad/Raspberry Pi Fan Hat.sch</source>
+    <date>Thu 25 Jun 2020 09:37:33 CEST</date>
     <tool>Eeschema 5.1.6-1.fc32</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -23,6 +23,9 @@
       <value>Conn_01x03_Female</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="manf#">RND 205-00643</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x03_Female" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EED4F28</tstamp>
@@ -31,6 +34,9 @@
       <value>Conn_01x02_Male</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="manf#">SL 1X36W 2,54</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EED55F8</tstamp>
@@ -39,6 +45,9 @@
       <value>BC817</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>http://www.fairchildsemi.com/ds/BC/BC817.pdf</datasheet>
+      <fields>
+        <field name="manf#">BC817-25</field>
+      </fields>
       <libsource lib="Transistor_BJT" part="BC817" description="0.8A Ic, 45V Vce, NPN Transistor, SOT-23"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF099CD</tstamp>
@@ -47,6 +56,9 @@
       <value>430 Ohm</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="manf#">RND1550805S8F4300T5E</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF09D28</tstamp>
@@ -55,6 +67,9 @@
       <value>TS4148</value>
       <footprint>Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="manf#">TS4148C RZG</field>
+      </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF0A164</tstamp>

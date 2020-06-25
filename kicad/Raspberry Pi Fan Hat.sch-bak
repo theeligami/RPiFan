@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "RasPi Fan Control"
+Date "2020-06-22"
+Rev "1.0"
 Comp ""
-Comment1 ""
+Comment1 "Author Elias Kleimeier"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -21,6 +21,7 @@ F 0 "J1" H 1092 1142 50  0000 C CNN
 F 1 "Conn_01x03_Female" H 1092 1141 50  0001 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 1200 1375 50  0001 C CNN
 F 3 "~" H 1200 1375 50  0001 C CNN
+F 4 "RND 205-00643" H 1200 1375 50  0001 C CNN "manf#"
 	1    1200 1375
 	-1   0    0    -1  
 $EndComp
@@ -32,6 +33,7 @@ F 0 "J2" H 1308 2389 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 1308 2390 50  0001 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1200 2300 50  0001 C CNN
 F 3 "~" H 1200 2300 50  0001 C CNN
+F 4 "9900000195052" H 1200 2300 50  0001 C CNN "manf#"
 	1    1200 2300
 	1    0    0    1   
 $EndComp
@@ -84,6 +86,7 @@ F 0 "Q1" H 3616 1421 50  0000 L CNN
 F 1 "BC817" H 3616 1330 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3625 1300 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 3425 1375 50  0001 L CNN
+F 4 "BC817-25" H 3425 1375 50  0001 C CNN "manf#"
 	1    3425 1375
 	1    0    0    -1  
 $EndComp
@@ -95,6 +98,7 @@ F 0 "R1" V 2868 1375 50  0000 C CNN
 F 1 "430 Ohm" V 2959 1375 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3005 1375 50  0001 C CNN
 F 3 "~" H 3075 1375 50  0001 C CNN
+F 4 "RND1550805S8F4300T5E" H 3075 1375 50  0001 C CNN "manf#"
 	1    3075 1375
 	0    1    1    0   
 $EndComp
@@ -106,6 +110,7 @@ F 0 "D1" V 1554 2230 50  0000 L CNN
 F 1 "TS4148" V 1645 2230 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1600 2150 50  0001 C CNN
 F 3 "~" H 1600 2150 50  0001 C CNN
+F 4 "TS4148C RZG" H 1600 2150 50  0001 C CNN "manf#"
 	1    1600 2150
 	0    1    1    0   
 $EndComp
