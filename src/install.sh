@@ -11,6 +11,7 @@ if [ $input == "y" ] || [ $input == "Y" ]; then
 		echo "Installing RPiFan - by Elias Kleimeier - https://github.com/theeligami"
 		mkdir /usr/local/sbin/RPiFan/
 		cp RPiFan.py /usr/local/sbin/RPiFan
+		cp uninstall.sh /usr/local/sbin/RPiFan
 		echo "Done"
 
 		echo "Installing dependencies"
