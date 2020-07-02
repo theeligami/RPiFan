@@ -3,11 +3,11 @@ import time
 import os
 
 FAN = 14        # Fan GPIO
-FAN_MIN = 58    # Fan minimum duty cycle
+FAN_MIN = 60    # Fan minimum duty cycle
 FAN_MAX = 100# Fan maximum duty cycle
-FAN_25 = (FAN_MAX - FAN_MIN) * 0,25
-FAN_50 = (FAN_MAX - FAN_MIN) * 0,5
-FAN_75 = (FAN_MAX - FAN_MIN) * 0,75
+FAN_25 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.25
+FAN_50 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.5
+FAN_75 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.75
 duty = 0        # Duty cycle
 
 # Setup GPIOs
@@ -36,3 +36,6 @@ def main():
         else:
             p.ChangeDutyCycle(FAN_MAX)
         time.sleep(1)
+
+if __name__=="__main__":
+    main()
