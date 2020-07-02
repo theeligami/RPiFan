@@ -7,14 +7,14 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 read -p "Would you like to install RPiFan Control by Elias Kleimeier? [y/N]: " input
-if [ $input == "y" || $input == "Y" ]; then
+if [ $input == "y" ] || [ $input == "Y" ]; then
 		echo "Installing RPiFan - by Elias Kleimeier - https://github.com/theeligami"
 		mkdir /usr/local/sbin/RPiFan/
 		cp RPiFan.py /usr/local/sbin/RPiFan
 		echo "Done"
 
 		echo "Installing dependencies"
-		apt -y install python3
+		apt -y install python3 python3-pip
 		pip3 install -y RPi.gpio
 		echo "Done"
 
@@ -27,7 +27,7 @@ if [ $input == "y" || $input == "Y" ]; then
 		echo "Done"
 
 		read -p "Would you like to reboot now? [y/N]: " input
-		if [ $input == "y" || $input == "Y" ]; then
+		if [ $input == "y" ] || [ $input == "Y" ]; then
 				echo "Rebooting now"
 				shutdown -r now 'Installation of RPiFan Control requires reboot'
 		else
