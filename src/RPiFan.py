@@ -17,7 +17,7 @@ GPIO.setup(FAN, GPIO.OUT)
 # Get CPU temperature
 def get_temp():
     cpu_temp = os.popen("vcgencmd measure_temp").readline()
-    return cpu_temp.replace("temp=", "").replace("'C\n", "")
+    return float(cpu_temp.replace("temp=", "").replace("'C\n", ""))
 
 def main():
     p = GPIO.PWM(FAN, 100)
