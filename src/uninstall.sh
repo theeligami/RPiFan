@@ -7,7 +7,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 read -p "Would you like to uninstall RPiFan Control by Elias Kleimeier? [y/N]: " input
-if [ $input == "y" || $input == "Y" ]; then
+if [ $input == "y" ] || [ $input == "Y" ]; then
 		echo "Uninstalling"
 		echo "Deleting /usr/local/sbin/RPiFan"
 		rm -rf /usr/local/sbin/RPiFan
