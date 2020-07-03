@@ -6,6 +6,12 @@ These instructions will get you the latest version of the RPiFan fan control scr
 The repository also includes a [kicad](https://kicad-pcb.org/) project file so you can order the pcb from a manufacturer or design your own.
 ### Prerequisites
 You need a working version of Raspberry Pi OS (formerly Raspbian) on your system. You can get the latest version of Raspberry Pi OS [here](https://www.raspberrypi.org/downloads/).
+
+### Connecting the pcb
+![Connecting the RPiFan pcb](doc/images/connecting.svg?raw=true "How to connect the pcb to the raspberry pi GPIOs")
+
+*[Original Image by Efa](https://commons.wikimedia.org/wiki/File:Raspberry_Pi_Zero_-_Location_of_connectors_and_ICs.svg) licensed under the [creative commons Attribution-ShareAlike 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode)*
+
 ### Installing
 Clone the repository to your raspberry pi.
 ```
