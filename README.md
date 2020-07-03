@@ -3,6 +3,7 @@ A PWM fan speed controller for the raspberry pi.
 
 ## Getting started
 These instructions will get you the latest version of the RPiFan fan control script installed. It will also add and activate a system service for to run the script automatically.
+The repository also includes a [kicad](https://kicad-pcb.org/) project file so you can order the pcb from a manufacturer or design your own.
 ### Prerequisites
 You need a working version of Raspberry Pi OS (formerly Raspbian) on your system. You can get the latest version of Raspberry Pi OS [here](https://www.raspberrypi.org/downloads/).
 ### Installing
