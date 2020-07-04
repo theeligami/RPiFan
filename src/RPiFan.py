@@ -3,14 +3,14 @@ import time
 import os
 
 
-PWM_FREQ = 100  # PWM Frequency
+PWM_FREQ = 100  # PWM Frequency in Hz
 
-FAN_MIN = 60    # Minimum value for PWM duty cycle to turn the fan on.
+FAN_MIN = 0     # Minimum value for PWM duty cycle to turn the fan on.
                 # Please adjust this value if you have issues with the fan not
                 # turning on on the lower duty cycle settings.
 
 # Don't touch these values unless you know what you are doing!
-FAN_GPIO = 14        # Fan GPIO
+FAN_GPIO = 14   # Fan GPIO
 FAN_25 = FAN_MIN + (100 - FAN_MIN) * 0.25
 FAN_50 = FAN_MIN + (100 - FAN_MIN) * 0.5
 FAN_75 = FAN_MIN + (100 - FAN_MIN) * 0.75
@@ -25,7 +25,7 @@ def get_temp():
     return float(cpu_temp.replace("temp=", "").replace("'C\n", ""))
 
 def main():
-    p = GPIO.PWM(FAN_GPIO, 100)
+    p = GPIO.PWM(FAN_GPIO, PWM_FREQ)
     p.start(0)
 
     while 1:
