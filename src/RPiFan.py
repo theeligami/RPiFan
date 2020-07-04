@@ -2,21 +2,22 @@ import RPi.GPIO as GPIO
 import time
 import os
 
-FAN = 14        # Fan GPIO
+
+PWM_FREQ = 100  # PWM Frequency
 
 FAN_MIN = 60    # Minimum value for PWM duty cycle to turn the fan on.
                 # Please adjust this value if you have issues with the fan not
                 # turning on on the lower duty cycle settings.
 
-FAN_MAX = 100   # Fan maximum duty cycle
-FAN_25 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.25
-FAN_50 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.5
-FAN_75 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.75
-duty = 0        # Duty cycle
+# Don't touch these values unless you know what you are doing!
+FAN_GPIO = 14        # Fan GPIO
+FAN_25 = FAN_MIN + (100 - FAN_MIN) * 0.25
+FAN_50 = FAN_MIN + (100 - FAN_MIN) * 0.5
+FAN_75 = FAN_MIN + (100 - FAN_MIN) * 0.75
 
 # Setup GPIOs
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(FAN, GPIO.OUT)
+GPIO.setup(FAN_GPIO, GPIO.OUT)
 
 # Get CPU temperature
 def get_temp():
@@ -24,8 +25,8 @@ def get_temp():
     return float(cpu_temp.replace("temp=", "").replace("'C\n", ""))
 
 def main():
-    p = GPIO.PWM(FAN, 100)
-    p.start(duty)
+    p = GPIO.PWM(FAN_GPIO, 100)
+    p.start(0)
 
     while 1:
         temp = get_temp()
