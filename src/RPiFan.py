@@ -3,8 +3,12 @@ import time
 import os
 
 FAN = 14        # Fan GPIO
-FAN_MIN = 60    # Fan minimum duty cycle
-FAN_MAX = 100# Fan maximum duty cycle
+
+FAN_MIN = 60    # Minimum value for PWM duty cycle to turn the fan on.
+                # Please adjust this value if you have issues with the fan not
+                # turning on on the lower duty cycle settings.
+
+FAN_MAX = 100   # Fan maximum duty cycle
 FAN_25 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.25
 FAN_50 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.5
 FAN_75 = FAN_MIN + (FAN_MAX - FAN_MIN) * 0.75
