@@ -16,7 +16,7 @@ if [ $input == "y" ] || [ $input == "Y" ]; then
 
 		echo "Installing dependencies"
 		apt -y install python3 python3-pip
-		pip3 install -y RPi.gpio
+		yes | pip3 install RPi.gpio
 		echo "Done"
 
 		echo "Adding RPiFan to systemd service"
